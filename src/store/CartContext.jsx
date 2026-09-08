@@ -67,7 +67,9 @@ export function CartContextProvider({ children }) {
     removeItem,
   };
 
-  return <CartContext value={cartContext}>{children}</CartContext>;
+  return (
+    <CartContext.Provider value={cartContext}>{children}</CartContext.Provider>
+  );
 }
 
 export default CartContext;
